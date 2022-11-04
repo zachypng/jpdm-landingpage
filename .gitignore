@@ -1,0 +1,8 @@
+node_modules/
+tailwind.config.js
+package.json
+package-lock.json
+LICENSE
+input.css
+browserconfig.xml
+README.md
