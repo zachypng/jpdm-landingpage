@@ -32,19 +32,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
     <meta name="msapplication-TileColor" content="#143954">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
     <link href="./output.css" rel="stylesheet">
 </head>
 <body>
     <header class="fixed w-full z-50">
-        <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900 drop-shadow-md z-50">
+        <nav class="bg-white border-gray-200 py-2.5 dark:bg-black drop-shadow-md z-50">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="#" class="flex items-center nav-scroll-to" data-target="hero">
-                    <img src="./images/logo.svg" class="h-12 mr-3 sm:h-16" alt="Jensen DiversityMetrics Logo" />
+                    <img src="./images/logo.svg" class="h-12 mr-3 sm:h-16 dark:hidden" alt="Jensen DiversityMetrics Logo" />
+                    <img src="./images/logo_alt.svg" class="hidden h-12 mr-3 sm:h-16 dark:block" alt="Jensen DiversityMetrics Logo" />
                 </a>
                 <div class="flex items-center lg:order-2">
-                    <div class="hidden sm:flex"><a href="https://airtable.com/shrPvUIpJ8JGCr9Ol" target="_blank" rel="noopener noreferrer" class="text-white bg-jdm-blue hover:bg-jdm-sky shadow focus:ring-4 focus:ring-blue-400 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-6 lg:ml-6 text-center dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 w-36 whitespace-nowrap transform transition duration-500 hover:scale-110 z-10">Request a Demo</a>
-                    <a href="https://airtable.com/shrDCCxIubklaV920" target="_blank" rel="noopener noreferrer" class="text-white bg-jdm-blue hover:bg-jdm-sky shadow focus:ring-4 focus:ring-blue-400 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-6 lg:ml-6 text-center dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 w-36 whitespace-nowrap transform transition duration-500 hover:scale-110 z-10">Contact Us</a></div>
+                    <div class="hidden sm:flex"><a href="https://airtable.com/shrPvUIpJ8JGCr9Ol" target="_blank" rel="noopener noreferrer" class="text-white bg-jdm-blue hover:bg-jdm-sky shadow focus:ring-4 focus:ring-blue-400 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-6 lg:ml-6 text-center dark:bg-jdm-blue dark:hover:bg-jdm-sky focus:outline-none dark:focus:ring-blue-800 w-36 whitespace-nowrap transform transition duration-500 hover:scale-110 z-10">Request a Demo</a>
+                    <a href="https://airtable.com/shrDCCxIubklaV920" target="_blank" rel="noopener noreferrer" class="text-white bg-jdm-blue hover:bg-jdm-sky shadow focus:ring-4 focus:ring-blue-400 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-6 lg:ml-6 text-center dark:bg-jdm-blue dark:hover:bg-jdm-sky focus:outline-none dark:focus:ring-blue-800 w-36 whitespace-nowrap transform transition duration-500 hover:scale-110 z-10">Contact Us</a></div>
                     <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -72,15 +74,15 @@
     </header>
 
     <!-- Start block -->
-    <section class="bg-gray-50" id="hero">
+    <section class="bg-gray-50 dark:bg-zinc-900" id="hero">
         <div class="grid max-w-screen-xl px-4 pt-32 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28 relative">
             <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-jdm-blue dark:text-white">Measure. Manage.</h1>
-                <h1 class="max-w-2xl mb-4 text-5xl font-extrabold leading-none tracking-tight md:text-6xl xl:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-jdm-sky to-purple-600 via-purple-600 animate-anim-gradient-text z-10">Improve.</h1>
-                 <h2 class="max-w-2xl mb-8 text-2xl font-light leading-none tracking-wide xl:text-3xl text-jdm-sky">The solution for companies to measure diversity and inclusion based on the metrics most meaningful for them and their investors</h2>
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-jdm-blue dark:text-white">Measure. <br>Manage. <br><span class="text-jdm-sky">Improve.</span></h1>
+                <!-- <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-transparent bg-clip-text bg-gradient-to-br from-jdm-sky to-purple-600 via-purple-600 animate-anim-gradient-text z-10">Improve.</h1> -->
+                <h2 class="max-w-2xl mb-8 pt-4 text-2xl font-light leading-none tracking-wide xl:text-3xl text-jdm-sky dark:text-gray-400">The solution for companies to measure diversity and inclusion based on the metrics most meaningful for them and their investors</h2>
                 <!-- <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Enroll in the pre-registration for our beta today.</p> -->
                 <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                    <a href="https://airtable.com/shrqAEo5G3Gt0P6PR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-center bg-gradient-to-br from-jdm-pink to-jdm-pink via-jdm-blue text-gray-100 border border-gray-200 rounded-full sm:w-auto shadow focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-size-200 bg-pos-0 hover:bg-pos-100 transform transition-all duration-500 hover:scale-110 z-10">
+                    <a href="https://airtable.com/shrqAEo5G3Gt0P6PR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-center bg-jdm-blue dark:bg-transparent text-gray-100 border border-gray-200 rounded-full sm:w-auto shadow focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-300 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-size-200 bg-pos-0 hover:bg-pos-100 transform transition-all duration-500 hover:scale-110 z-10">
                         <img src="./images/checkmark1.png" class="w-6 h-6 mr-2 text-gray-500 dark:text-gray-400"/> Pre-Register for our Beta Launch
                     </a> 
                 </div>
@@ -92,55 +94,53 @@
     </section>
     <!-- End block -->
     <!-- Start block -->
-    <section class="bg-white dark:bg-gray-800 scroll-mt-8" id="features">
+    <section class="bg-white dark:bg-neutral-900 scroll-mt-8" id="features">
         <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
             <!-- Row -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                 <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-jdm-blue dark:text-white">Explore Actionable Investment Reporting</h2>
+                    <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-jdm-blue dark:text-gray-50">Explore Actionable Investment Reporting</h2>
                     <!-- <p class="mb-8 font-light lg:text-xl">With access to over 14 dashboards, you can explore:</p> -->
                     <!-- List -->
                     <ul role="list" class="space-y-5 border-b pb-8 border-gray-200 my-8 dark:border-gray-700">
                         <li class="flex space-x-3">
                             <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-jdm-sky dark:text-purple-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m16.719 19.752l-.64-5.124A3 3 0 0 0 13.101 12h-2.204a3 3 0 0 0-2.976 2.628l-.641 5.124A2 2 0 0 0 9.266 22h5.468a2 2 0 0 0 1.985-2.248Z"/><circle cx="12" cy="5" r="3"/><circle cx="4" cy="9" r="2"/><circle cx="20" cy="9" r="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 14h-.306a2 2 0 0 0-1.973 1.671l-.333 2A2 2 0 0 0 3.361 20H7m13-6h.306a2 2 0 0 1 1.973 1.671l.333 2A2 2 0 0 1 20.639 20H17"/></g></svg>
-                            <span class="text-base font-medium leading-tight text-jdm-blue dark:text-white">360° lens of gender and ethnicity</span>
+                            <svg class="flex-shrink-0 w-5 h-5 text-jdm-sky" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m16.719 19.752l-.64-5.124A3 3 0 0 0 13.101 12h-2.204a3 3 0 0 0-2.976 2.628l-.641 5.124A2 2 0 0 0 9.266 22h5.468a2 2 0 0 0 1.985-2.248Z"/><circle cx="12" cy="5" r="3"/><circle cx="4" cy="9" r="2"/><circle cx="20" cy="9" r="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 14h-.306a2 2 0 0 0-1.973 1.671l-.333 2A2 2 0 0 0 3.361 20H7m13-6h.306a2 2 0 0 1 1.973 1.671l.333 2A2 2 0 0 1 20.639 20H17"/></g></svg>
+                            <span class="text-base font-medium leading-tight text-jdm-blue dark:text-gray-200">360° lens of gender and ethnicity</span>
                         </li>
                         <li class="flex space-x-3">
                             <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-jdm-sky dark:text-purple-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-miterlimit="5.759" d="M3 3v16a2 2 0 0 0 2 2h16"/><path stroke-miterlimit="5.759" d="m7 14l4-4l4 4l6-6"/><path d="M18 8h3v3"/></g></svg>
-                            <span class="text-base font-medium leading-tight text-jdm-blue dark:text-white">Industry-wide statistics, filtered by sector</span>
+                            <svg class="flex-shrink-0 w-5 h-5 text-jdm-sky" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-miterlimit="5.759" d="M3 3v16a2 2 0 0 0 2 2h16"/><path stroke-miterlimit="5.759" d="m7 14l4-4l4 4l6-6"/><path d="M18 8h3v3"/></g></svg>
+                            <span class="text-base font-medium leading-tight text-jdm-blue dark:text-gray-200">Industry-wide statistics, filtered by sector</span>
                         </li>
                         <li class="flex space-x-3">
                             <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-jdm-sky dark:text-purple-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633l2.07-5.734Z"/></svg>
-                            <span class="text-base font-medium leading-tight text-jdm-blue dark:text-white">Inclusion reports that combine both qualitative and quantitative data</span>
+                            <svg class="flex-shrink-0 w-5 h-5 text-jdm-sky" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633l2.07-5.734Z"/></svg>
+                            <span class="text-base font-medium leading-tight text-jdm-blue dark:text-gray-200">Inclusion reports that combine both qualitative and quantitative data</span>
                         </li>
-                        <p class="text-jdm-sky font-extralight">+ much more.</p>
+                        <p class="text-jdm-sky dark:text-neutral-300 font-extralight">+ much more.</p>
                     </ul>
                     <p class="mb-8 font-light lg:text-xl">See how Jensen DiversityMetrics™ can unlock meaningful change within your organization.</p>
                     <a href="https://airtable.com/shrPvUIpJ8JGCr9Ol" target="_blank" rel="noopener noreferrer" class="text-white bg-jdm-blue hover:bg-jdm-sky shadow focus:ring-4 focus:ring-blue-400 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 text-center focus:outline-none whitespace-nowrap transform transition duration-500 hover:scale-110 z-10">Request a Demo</a>
                 </div>
-                <span class="text-center font-bold text-jdm-blue text-lg pb-8">Hires
                 <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/features-1.svg" alt="dashboard feature image">
-                </span>
             </div>
 
         </div>
       </section>
     <!-- End block -->
     <!-- Start block -->
-    <section class="bg-gray-50 scroll-mt-16" id="user_benefits">
+    <section class="bg-gray-50 dark:bg-zinc-900 scroll-mt-16" id="user_benefits">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-12 lg:px-6">
             <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
-                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-jdm-blue dark:text-white">User Benefits</h2>
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-jdm-blue dark:text-gray-50">User Benefits</h2>
                 <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Jensen DiversityMetrics™ is a tech platform enabling users to evaluate DEI workforce performance.</p>
             </div>
             <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
                 <!-- Card -->
-                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-jdm-blue bg-white border border-gray-100 rounded-lg shadow-lg dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-jdm-blue bg-white border border-gray-100 rounded-lg shadow-lg dark:border-gray-600 xl:p-8 dark:bg-zinc-800 dark:text-white">
                     <h3 class="mb-4 text-2xl font-extrabold">GP Benefits</h3>
-                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Facilitate DEI Management & Reporting</p>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-300">Facilitate DEI Management & Reporting</p>
                     <div class="flex items-baseline justify-center mt-8">
                     </div>
                     <!-- List -->
@@ -161,17 +161,17 @@
                             <span>DEI analysis of portfolio companies</span>
                         </li>
                         <li class="flex items-center space-x-3 pt-4">
-                            <span class="mx-auto font-extralight text-gray-500">Limited private beta spots available</span>
+                            <span class="mx-auto font-extralight text-gray-500 dark:text-gray-300">Limited private beta spots available</span>
                         </li>
                     </ul>
-                    <a href="https://airtable.com/shrqAEo5G3Gt0P6PR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm md:text-base font-medium text-center bg-gradient-to-br from-jdm-pink to-jdm-pink via-jdm-blue text-gray-100 border border-gray-200 rounded-full sm:w-auto shadow focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-size-200 bg-pos-0 hover:bg-pos-100 transform transition-all duration-500 hover:scale-110 z-10">
+                    <a href="https://airtable.com/shrqAEo5G3Gt0P6PR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm md:text-base font-medium text-center bg-jdm-blue dark:bg-transparent text-gray-100 border border-gray-200 rounded-full sm:w-auto shadow focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-50 dark:hover:bg-gray-700 dark:focus:ring-gray-800 transform transition-all duration-500 hover:scale-110 z-10">
                         <img src="./images/checkmark1.png" class="w-6 h-6 mr-2 text-gray-500 dark:text-gray-400"/> Pre-Register for our Beta Launch
                     </a> 
                 </div>
                 <!-- Pricing Card -->
-                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-jdm-blue bg-white border border-gray-100 rounded-lg shadow-lg dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-jdm-blue bg-white border border-gray-100 rounded-lg shadow-lg dark:border-gray-600 xl:p-8 dark:bg-zinc-800 dark:text-white">
                     <h3 class="mb-4 text-2xl font-extrabold">LP Benefits</h3>
-                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Measure and manage DEI in your portfolio</p>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-300">Measure and manage DEI in your portfolio</p>
                     <div class="flex items-baseline justify-center mt-8">
                     </div>
                     <!-- List -->
@@ -192,10 +192,10 @@
                             <span>Rank asset manager DEI performance through a single score</span>
                         </li>
                         <li class="flex items-center space-x-3 pt-4">
-                            <span class="mx-auto font-extralight text-gray-500">Limited private beta spots available</span>
+                            <span class="mx-auto font-extralight text-gray-500 dark:text-gray-300">Limited private beta spots available</span>
                         </li>
                     </ul>
-                    <a href="https://airtable.com/shrqAEo5G3Gt0P6PR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm md:text-base font-medium text-center bg-gradient-to-br from-jdm-pink to-jdm-pink via-jdm-blue text-gray-100 border border-gray-200 rounded-full sm:w-auto shadow focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-size-200 bg-pos-0 hover:bg-pos-100 transform transition-all duration-500 hover:scale-110 z-10">
+                    <a href="https://airtable.com/shrqAEo5G3Gt0P6PR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm md:text-base font-medium text-center bg-jdm-blue dark:bg-transparent text-gray-100 border border-gray-200 rounded-full sm:w-auto shadow focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-50 dark:hover:bg-gray-700 dark:focus:ring-gray-800 transform transition-all duration-500 hover:scale-110 z-10">
                         <img src="./images/checkmark1.png" class="w-6 h-6 mr-2 text-gray-500 dark:text-gray-400"/> Pre-Register for our Beta Launch
                     </a> 
                 </div>
@@ -204,9 +204,9 @@
         </section>
     <!-- End block -->
     <!-- Start block -->
-    <section class="bg-white dark:bg-gray-900 scroll-mt-16" id="showcase">
+    <section class="bg-white dark:bg-neutral-900 scroll-mt-16" id="showcase">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-12 lg:px-6">
-            <h1 class="pb-6 text-3xl font-extrabold tracking-tight text-jdm-blue text-center">See Jensen DiversityMetrics™ in action</h1>
+            <h1 class="pb-6 text-3xl font-extrabold tracking-tight text-jdm-blue dark:text-gray-50 text-center">See Jensen DiversityMetrics™ in action</h1>
             <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400 text-center">View our showcase video below.</p>
             <!-- <div class="flex flex-col max-w-fit pb-8 mx-auto text-center xl:p-8"> -->
             <div class="aspect-w-16 aspect-h-9">
@@ -214,7 +214,7 @@
                     <source src="./images/video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video> -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jb_Fm6elSDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jb_Fm6elSDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow dark:shadow-2xl dark:drop-shadow-pink"></iframe>
             </div>
             <!-- <div class="lg:flex lg:flex-row items-center z-10">
                 <div class="flex flex-col max-w-lg pb-8 mx-auto text-center xl:p-8">
@@ -232,7 +232,7 @@
         </section>
     <!-- End block -->
     <!-- Start block -->
-    <section class="bg-gray-50 dark:bg-gray-900 pb-8">
+    <section class="bg-gray-50 dark:bg-zinc-900 pb-8">
         <!-- <div class="max-w-screen-xl px-4 pt-4 pb-8 mx-auto lg:pb-16">
             <h1 class="my-6 py-6 text-3xl font-extrabold tracking-tight text-jdm-blue text-center">Press Coverage</h1>
             <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-3 xl:gap-16 h-auto pt-4">
@@ -257,7 +257,7 @@
             </div>
         </div> -->
         <div class="max-w-screen-xl px-8 pt-4 pb-8 mx-auto text-center container">
-            <h1 class="text-3xl font-extrabold tracking-tight text-jdm-blue text-center py-8">Press Coverage</h1>
+            <h1 class="text-3xl font-extrabold tracking-tight text-jdm-blue dark:text-gray-50 text-center py-8">Press Coverage</h1>
             <div class="hidden lg:flex lg:flex-wrap lg:columns-3 lg:gap-x-6 lg:gap-y-3 w-full justify-center overflow-hidden">
                 <div class="w-full md:w-1/2 lg:w-1/4 p-3">
                     <div class="flex flex-1 items-center justify-center lg:py-4 lg:px-2 h-full bg-white rounded-md shadow">
@@ -317,7 +317,7 @@
     </section>
     <!-- End block -->
     <!-- End block -->
-    <footer class="bg-black dark:bg-gray-800">
+    <footer class="bg-black">
         <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-6 md:p-8 lg:p-10">
             <hr class="my-4 mx-auto w-80 h-0.5 bg-gray-700 rounded border-0 md:my-10 dark:bg-gray-700">
             <div class="text-center">
